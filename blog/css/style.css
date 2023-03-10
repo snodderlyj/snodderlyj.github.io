@@ -1,0 +1,231 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "rozhaone";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "robotoslab";
+    src: url('../fonts/serif/robotoslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "josefinslab";
+    src: url('../fonts/serif/josefinslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BODY */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+p {
+    font-family: opensans, Arial, sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: montserrat, 'Times New Roman', sans-serif;
+    letter-spacing: .0325rem;
+}
+h1 {
+    font-size: 3rem;
+    letter-spacing: .25rem;
+    transform: rotate(-5deg);
+    text-align: center;
+}
+.highlight {
+    display: inline-block;
+    font-family: ultra, Georgia, sans-serif;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color:#732C2C;
+    background-color:#A64B37;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+
+/* LAYOUT */
+header {
+    padding: .5rem 0rem 1rem 0rem;
+}
+nav {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.main-section {
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding-right: 3rem;
+}
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #28234b;
+    padding-left: 2rem;
+}
+aside p {
+    border-bottom: 1px solid #28234b;
+    padding-bottom:.5rem;
+    font-size: .75rem;
+}
+aside p a {
+    color: black;
+    font-size: .5rem;
+    word-spacing: -0.15rem;
+}
+.subsection {
+    display:flex;
+}
+button {
+    font-size: 2rem;
+    border: 1px solid black;
+    border-radius: .3rem;
+    color:#732C2C;
+    background-color:#A64B37;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+/* IMGS */
+
+img {
+    width:100%;
+}
+figure {
+    margin: 0px;
+}
+.article-image {
+    width:33%;
+    float: left;
+    margin-right: .75rem;
+}
+.subsection {
+    margin: 1rem 0rem;
+}
+.subsection figure {
+    margin: 0rem .25rem;
+    background-color:#A67951;
+}
+
+a {
+    text-decoration: none;
+}
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-family: lato, Georgia, serif;
+    color: #A67951;
+}
+nav {
+    border-top: 1px solid #A64B37;
+    border-bottom: 1px solid #A64B37;
+}
+nav a:focus, nav a:hover {
+    color: #28234b;
+}
+
+nav a:active {
+    color: #732C2C;
+    text-decoration:line-through;
+    transform: rotate(2.5deg);
+}
